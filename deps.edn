@@ -1,0 +1,18 @@
+{:paths ["src" "resources"]
+
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        org.eclipse.jetty/jetty-server {:mvn/version "9.4.19.v20190610"}
+        ring/ring-core {:mvn/version "1.7.1"}
+        ring/ring-jetty-adapter {:mvn/version "1.7.1"}
+
+        ;; Java's crazy logging
+        org.clojure/tools.logging {:mvn/version "0.5.0"}
+        org.slf4j/slf4j-api {:mvn/version "1.7.27"}
+        org.slf4j/log4j-over-slf4j {:mvn/version "1.7.27"}
+        ch.qos.logback/logback-classic {:mvn/version "1.2.3"}}
+
+ :aliases {:dev {:extra-paths ["dev" "dev-resources"]
+                 :extra-deps {nrepl/nrepl {:mvn/version "0.6.0"}}}}
+
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://clojars.org/repo"}}}
