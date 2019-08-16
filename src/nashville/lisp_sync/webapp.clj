@@ -8,7 +8,9 @@
    :body (hiccup/html
            [:body
             [:div
-             [:span "Hello, Lisp!"]]])})
+             [:form
+              [:input {:name "mah-button"}]
+              [:button {:type :submit}]]]])})
 
 (defn start-server []
   (jetty/run-jetty (fn [req]
